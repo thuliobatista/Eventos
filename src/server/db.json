@@ -9,6 +9,11 @@
       "name": "celia",
       "password": "123",
       "id": 2
+    },
+    {
+      "name": "Danilo",
+      "password": "123456",
+      "id": 3
     }
   ],
   "contacts": [
@@ -24,8 +29,6 @@
       "age": "29",
       "phone": "999998888"
     }
-    
-    
   ],
   "profile": {
     "user": "Admin",

@@ -1,31 +1,13 @@
-import React, { useState } from 'react';
-import { View, Button, TextInput, Text,StyleSheet,ImageBackground,Image,Animated } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, ActivityIndicator, FlatList, Button } from 'react-native';
 import { URL } from '../server/constants';
-import { colors } from '../../utils/colors';
-import {sizes} from '../../utils/sizes';
 
-const Register = ({ navigation }) => {
 
-  const image = require('../images/fundo1.jpg')
-  const [opcBlack] = useState(new Animated.Value(1));
+const Evento = ({ navigation }) => {
+  
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [rotacao] = useState(new Animated.Value(0));
-
-
-
-  let rotacaoInterpolada = rotacao.interpolate({
-    inputRange: [0, 90],
-    outputRange: ['0deg', '180deg'],
-  });
-
-  Animated.loop(
-    
-    Animated.sequence([
-      Animated.timing(opcBlack, {toValue:0, duration:1500}),
-      Animated.timing(opcBlack, {toValue:1, duration:1500})
-    ])      
-  ).start();
+  
   
   const handleRegister = () => {
     if (name != "" && password != "") {
@@ -103,7 +85,7 @@ const Register = ({ navigation }) => {
    </View>
   );
 }
-export default Register;
+export default Evento;
 
 const styles = () => StyleSheet.create({
   box1:{

@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Home from '../pages/Home';
 import Favorites from '../pages/Favorites';
+import Evento from '../pages/Evento';
+import Perfil from '../pages/Perfil';
 
 
 const Tabs = createBottomTabNavigator();
@@ -14,6 +16,14 @@ const icons = {
   Favorites: {
     name: 'heart-circle-outline'
   },
+
+  Evento: {
+    name: 'flash-outline'
+  },
+  Perfil: {
+    name: 'person-outline'
+  },
+
 }
 
 const TabsNavigation = () => {
@@ -42,6 +52,15 @@ const TabsNavigation = () => {
       <Tabs.Screen
         name="Favorites"
         component={Favorites}
+      />
+
+      <Tabs.Screen
+        name="Evento"
+        component={Evento}
+      />
+      <Tabs.Screen
+        name="Perfil"
+        component={Perfil}
       />
     </Tabs.Navigator>
   );
