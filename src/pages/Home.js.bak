@@ -197,13 +197,6 @@ const styles = () => StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center', 
         margin: sizes.spacing.modalize,
-    },
-    modalize2:{
-        flex: 1, 
-        height: 180, 
-        justifyContent: 'space-around',
-        alignItems: 'center', 
-        margin: sizes.spacing.modalize,
     }
     
     
